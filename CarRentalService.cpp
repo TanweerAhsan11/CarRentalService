@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <dos.h>
-#include <iomanip>
+#include <iomanip> 
 
 // included required library files
 using namespace std;
@@ -43,12 +43,12 @@ class rent : public customer // inhereted class from customer class
  if(carmodel=="A")
  {
  	system("CLS");
-
+ 
 		cout<<"You have choosed Tesla model 2011"<<endl;
 		 ifstream inA("A.txt"); //displaying details of model A
          char str[200];
          while(inA) {
-         inA.getline(str, 200);
+         inA.getline(str, 200);  
          if(inA) cout << str << endl;
 }
 sleep(2);
@@ -56,14 +56,14 @@ sleep(2);
   if(carmodel=="B")
   {
   	system("CLS");
-
+  
 		cout<<"You have choosed Hyundai model 2015"<<endl;
 		 ifstream inB("B.txt"); //displaying details of model B
          char str[200];
          while(inB) {
-         inB.getline(str, 200);
+         inB.getline(str, 200);  
          if(inB) cout << str << endl;
-
+         
      }
      sleep(2);
  }
@@ -74,18 +74,18 @@ sleep(2);
 		 ifstream inC("C.txt"); //displaying details of model C
          char str[200];
          while(inC) {
-         inC.getline(str, 200);
+         inC.getline(str, 200);  
          if(inC) cout << str << endl;
      }
      sleep(2);
-}
+}  
 if(carmodel !="A" && carmodel !="B" &&  carmodel !="C" )
-
+     
       cout<<"Invaild Car Model. Please try again!"<<endl;
         }
 while(carmodel !="A" && carmodel !="B" &&  carmodel !="C" );
     cout<<"--------------------------------------------------------------------------"<<endl;
-    cout << "Please provide following information: "<<endl;
+    cout << "Please provide following information: "<<endl; 
 	//getting data from user related to rental service
     cout<<"Please select a Car No. : ";
     cin >> carnumber;
@@ -131,12 +131,12 @@ void showrent()
     cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
     int f;
     system("PAUSE");
-
+    
     system ("CLS");
-
+    
      ifstream inf("thanks.txt");
 
-
+  
   char str[300];
 
   while(inf) {
@@ -175,7 +175,7 @@ int main()
 {
 welcome obj1; //object created for welcome class
 obj1.welcum(); //welcum function is called
-rent obj2;
+rent obj2; 
 //object created for rent class and further member functions are called
 obj2.data();
 obj2.calculate();
@@ -189,8 +189,8 @@ int login(){
    char ch;
    cout<<"\n\n\n\n\n\n\n\n\t\t\t\t\t       CAR RENTAL SYSTEM \n\n";
    cout<<"\t\t\t\t\t------------------------------";
-   cout<<"\n\t\t\t\t\t\t     LOGIN \n";
-   cout<<"\t\t\t\t\t------------------------------\n\n";
+   cout<<"\n\t\t\t\t\t\t     LOGIN \n";	
+   cout<<"\t\t\t\t\t------------------------------\n\n";	
    cout << "\t\t\t\t\tEnter Password: ";
    ch = _getch();
    while(ch != 13){//character 13 is enter
